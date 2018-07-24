@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>VicBilibily欧阳敏岚</Authors>
+    <Company>欧阳敏岚工作室</Company>
+    <Copyright>base OYMLCN with WTFPL</Copyright>
+    <PackageLicenseUrl>http://www.wtfpl.net/</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/VicBilibily/OYMLCN.Word</PackageProjectUrl>
+    <PackageId>OYMLCN.Word</PackageId>
+    <RepositoryUrl>https://github.com/VicBilibily/OYMLCN.Word.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <Description>拆词Segmentation和关键词Keywords提取
+
+引用 using OYMLCN.Word;
+仅针对string类型扩展Get*、Cut*方法，原始方法调用请看源码。</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Update="Keywords\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Pinyin\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Segmentation\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Keywords\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pinyin\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Segmentation\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OYMLCN.Extension" Version="1.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+</Project>
