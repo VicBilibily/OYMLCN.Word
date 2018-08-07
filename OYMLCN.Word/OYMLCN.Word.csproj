@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>net461;netstandard2.0</TargetFrameworks>
     <Authors>VicBilibily欧阳敏岚</Authors>
     <Company>欧阳敏岚工作室</Company>
     <Copyright>base OYMLCN with WTFPL</Copyright>
@@ -10,44 +10,19 @@
     <PackageId>OYMLCN.Word</PackageId>
     <RepositoryUrl>https://github.com/VicBilibily/OYMLCN.Word.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <Description>拆词Segmentation和关键词Keywords提取
-
-引用 using OYMLCN.Word;
-仅针对string类型扩展Get*、Cut*方法，原始方法调用请看源码。</Description>
+    <Description>拆词Segmentation和关键词Keywords提取</Description>
     <PackageReleaseNotes>基于 https://github.com/anderscui/jieba.NET</PackageReleaseNotes>
+    <Version>1.1.0-beta4</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard2.0\OYMLCN.Word.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Update="Keywords\Resources.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Pinyin\Resources.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Segmentation\Resources.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="Keywords\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Pinyin\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Segmentation\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <Compile Remove="JiebaNet\Analyser\ConfigManager.cs" />
+    <Compile Remove="JiebaNet\Segmenter\Common\Extensions.cs" />
+    <Compile Remove="JiebaNet\Segmenter\ConfigManager.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -55,7 +30,28 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="JiebaNet\Analyser\ConfigManager.cs" />
+    <None Include="JiebaNet\Segmenter\Common\Extensions.cs" />
+    <None Include="JiebaNet\Segmenter\ConfigManager.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Properties\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>
