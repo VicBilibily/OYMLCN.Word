@@ -1,5 +1,6 @@
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员的 XML 注释
 
+using OYMLCN.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -56,7 +57,7 @@ namespace OYMLCN.Word.Keywords
                 {
                     var word = line.SplitBySign(" ");
                     var key = word.First();
-                    var freq = word.Skip(1).First().ConvertToDouble();
+                    var freq = word.Skip(1).First().AsType().Double;
                     idf[key] = freq;
                 }
 #if DEBUG

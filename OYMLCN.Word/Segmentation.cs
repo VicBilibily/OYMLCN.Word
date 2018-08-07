@@ -4,7 +4,7 @@ using System.Text;
 using OYMLCN.Word.Segmentation;
 using OYMLCN.Word.Segmentation.Pos;
 
-namespace OYMLCN.Word
+namespace OYMLCN.WordExtensions
 {
     /// <summary>
     /// Extension

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Newtonsoft.Json;
+using OYMLCN.Extensions;
 
 namespace OYMLCN.Word.Segmentation.Pos
 {
@@ -54,10 +55,10 @@ namespace OYMLCN.Word.Segmentation.Pos
 
         private static void LoadModel()
         {
-            _startProbs = Resources.pos_prob_start_json.GZipDecompress().ConvertToString().DeserializeJsonString<IDictionary<string, double>>();
-            _transProbs = Resources.pos_prob_trans_json.GZipDecompress().ConvertToString().DeserializeJsonString<IDictionary<string, IDictionary<string, double>>>();
-            _emitProbs = Resources.pos_prob_emit_json.GZipDecompress().ConvertToString().DeserializeJsonString<IDictionary<string, IDictionary<char, double>>>();
-            _stateTab = Resources.char_state_tab_json.GZipDecompress().ConvertToString().DeserializeJsonString<IDictionary<char, List<string>>>();
+            _startProbs = Resources.pos_prob_start_json.GZipDecompress().ConvertToString().DeserializeJsonToObject<IDictionary<string, double>>();
+            _transProbs = Resources.pos_prob_trans_json.GZipDecompress().ConvertToString().DeserializeJsonToObject<IDictionary<string, IDictionary<string, double>>>();
+            _emitProbs = Resources.pos_prob_emit_json.GZipDecompress().ConvertToString().DeserializeJsonToObject<IDictionary<string, IDictionary<char, double>>>();
+            _stateTab = Resources.char_state_tab_json.GZipDecompress().ConvertToString().DeserializeJsonToObject<IDictionary<char, List<string>>>();
         }
 
         private Tuple<double, List<string>> ViterbiCut(string sentence)

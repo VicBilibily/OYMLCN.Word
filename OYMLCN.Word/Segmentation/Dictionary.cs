@@ -1,5 +1,6 @@
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员的 XML 注释
 
+using OYMLCN.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -74,7 +75,7 @@ namespace OYMLCN.Word.Segmentation
                     _dict.Add(new Word()
                     {
                         Key = item.Key,
-                        Frequency = line.First().ConvertToInt(),
+                        Frequency = line.First().AsType().Int,
                         Tag = line.Last().Trim()
                     });
                 }

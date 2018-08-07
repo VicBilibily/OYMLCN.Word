@@ -14,6 +14,7 @@
 
 引用 using OYMLCN.Word;
 仅针对string类型扩展Get*、Cut*方法，原始方法调用请看源码。</Description>
+    <PackageReleaseNotes>基于 https://github.com/anderscui/jieba.NET</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
@@ -50,7 +51,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="OYMLCN.Extension" Version="1.3.0" />
+    <PackageReference Include="OYMLCN.Extension" Version="1.4.0-beta2" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,6 +1,7 @@
 ﻿#pragma warning disable
 using System.Collections.Generic;
 using System.Linq;
+using OYMLCN.Extensions;
 using OYMLCN.Word.Segmentation;
 using OYMLCN.Word.Segmentation.Pos;
 

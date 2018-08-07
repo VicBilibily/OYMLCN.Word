@@ -1,8 +1,9 @@
-﻿using OYMLCN.Word.Keywords;
+﻿
+using OYMLCN.Word.Keywords;
 using OYMLCN.Word.Segmentation;
 using System.Collections.Generic;
 
-namespace OYMLCN.Word
+namespace OYMLCN.WordExtensions
 {
     /// <summary>
     /// Extension

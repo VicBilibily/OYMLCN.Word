@@ -4,6 +4,7 @@ using System.Text;
 using OYMLCN.Word.Segmentation;
 using System.Linq;
 using OYMLCN.Word.Segmentation.Pos;
+using OYMLCN.Extensions;
 
 namespace OYMLCN.Word.Keywords
 {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OYMLCN.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -57,8 +58,8 @@ namespace OYMLCN.Word.Segmentation
                 {'S', -1.4652633398537678}
             };
 
-            _transProbs = Resources.prob_trans_json.GZipDecompress().ConvertToString().DeserializeJsonString<IDictionary<char, IDictionary<char, double>>>(); 
-            _emitProbs = Resources.prob_emit_json.GZipDecompress().ConvertToString().DeserializeJsonString<IDictionary<char, IDictionary<char, double>>>();
+            _transProbs = Resources.prob_trans_json.GZipDecompress().ConvertToString().DeserializeJsonToObject<IDictionary<char, IDictionary<char, double>>>(); 
+            _emitProbs = Resources.prob_emit_json.GZipDecompress().ConvertToString().DeserializeJsonToObject<IDictionary<char, IDictionary<char, double>>>();
         }
 
         private IEnumerable<string> ViterbiCut(string sentence)
