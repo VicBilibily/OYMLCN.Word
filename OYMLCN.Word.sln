@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OYMLCN.Word", "OYMLCN.Word\OYMLCN.Word.csproj", "{481CE2FE-FA5E-4250-BFAC-6A8F9289099F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OYMLCN.Word.Pinyin", "OYMLCN.Word.Pinyin\OYMLCN.Word.Pinyin.csproj", "{DC5B606A-1CA6-42B3-A735-70FEC8F59872}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OYMLCN.Extension", "..\OYMLCN.Extension\OYMLCN.Extension\OYMLCN.Extension.csproj", "{2C83C359-3944-44BF-A0A2-B233E159B25E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{481CE2FE-FA5E-4250-BFAC-6A8F9289099F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{481CE2FE-FA5E-4250-BFAC-6A8F9289099F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{481CE2FE-FA5E-4250-BFAC-6A8F9289099F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC5B606A-1CA6-42B3-A735-70FEC8F59872}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC5B606A-1CA6-42B3-A735-70FEC8F59872}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC5B606A-1CA6-42B3-A735-70FEC8F59872}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC5B606A-1CA6-42B3-A735-70FEC8F59872}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C83C359-3944-44BF-A0A2-B233E159B25E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C83C359-3944-44BF-A0A2-B233E159B25E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C83C359-3944-44BF-A0A2-B233E159B25E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C83C359-3944-44BF-A0A2-B233E159B25E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
